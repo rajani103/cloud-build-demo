@@ -7,6 +7,17 @@ steps:
   # Step 4: Push the backend Docker image to Artifact Registry
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'us-central1-docker.pkg.dev/$PROJECT_ID/demo-app/server']
+  
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args:
+      - 'run'
+      - 'deploy'
+      - 'demo-app' # Replace with your Cloud Run service name
+      - '--image=us-central1-docker.pkg.dev/$PROJECT_ID/demo-app/server'
+      - '--region=us-central1' # Replace with your preferred region
+      - '--platform=managed'
+      - '--allow-unauthenticated' # Add this if you want the service to be publicly accessible
+
 
   
 images:
