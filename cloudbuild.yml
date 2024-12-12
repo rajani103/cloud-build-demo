@@ -2,7 +2,7 @@ steps:
   # Step 3: Build the backend Docker image
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', 'us-central1-docker.pkg.dev/$PROJECT_ID/demo-app/server', '-f', 'Dockerfile', '.']
-    dir: './server'
+    dir: './node-sample-app'
 
   # Step 4: Push the backend Docker image to Artifact Registry
   - name: 'gcr.io/cloud-builders/docker'
