@@ -6,8 +6,8 @@ app.use(cors())
 app.use(express.json())
 
 app.get("/", function(req, res) {
-    res.send("App is running.")
-})
+    res.send("App is running now.")
+}) 
 
 app.listen(port, () => {
     console.log("Server is running on port: " + port)
