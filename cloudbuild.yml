@@ -4,7 +4,7 @@ steps:
     args: ['build', '-t', 'us-central1-docker.pkg.dev/$PROJECT_ID/demo-app/server', '-f', 'Dockerfile', '.']
     dir: './node-sample-app'
 
-  # Step 4: Push the backend Docker image to Artifact Registry
+  # Step 4: Push the backend Docker image to Artifact Registryyy
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'us-central1-docker.pkg.dev/$PROJECT_ID/demo-app/server']
   
