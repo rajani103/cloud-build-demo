@@ -6,7 +6,7 @@ app.use(cors())
 app.use(express.json())
 
 app.get("/", function(req, res) {
-    res.send("App is running now.")
+    res.send("App is running.")
 }) 
 
 app.listen(port, () => {
